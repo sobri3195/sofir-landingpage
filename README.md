@@ -2,15 +2,66 @@
 
 Modern, responsive, and performant landing page for **SOFIR** - Smart Optimized Framework for Integrated Rendering.
 
+> 🎉 **NOW AVAILABLE IN TWO VERSIONS**: Pure HTML/CSS/JS and React.js!
+
 ## 🚀 Features
 
 - **Modern Design**: Clean, professional design with smooth animations
 - **Mobile-First**: Fully responsive from 320px to 4K screens
-- **Performance Optimized**: Native ES5 JavaScript, no build process required
+- **Performance Optimized**: Native ES5 JavaScript, no build process required (HTML) or Vite-optimized (React)
 - **Accessibility**: WCAG AA compliant with proper ARIA labels
 - **SEO Ready**: Schema.org markup, Open Graph, and Twitter Cards
 - **Fast Loading**: Lazy loading images, optimized assets, minimal dependencies
-- **Vanilla Stack**: Pure HTML/CSS/JS - no frameworks required
+- **Two Versions**: Choose between Vanilla Stack (HTML/CSS/JS) or Modern React.js
+
+## 📦 Choose Your Version
+
+### 🌟 HTML Version (Original)
+Perfect for simple deployment without build tools.
+
+**Quick Start:**
+```bash
+# Just open in browser
+open index.html
+
+# Or use local server
+python -m http.server 8000
+```
+
+**Pros:**
+- No build process
+- Smallest bundle size
+- Works anywhere
+- Simple deployment
+
+**Documentation:** You're reading it! (this README)
+
+### ⚛️ React Version (NEW!)
+Modern React.js application with Vite and hooks.
+
+**Quick Start:**
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+**Pros:**
+- Component reusability
+- Better developer experience
+- Modern React ecosystem
+- Hot Module Replacement
+
+**Documentation:** 
+- Quick Start: [`QUICK-START-REACT.md`](QUICK-START-REACT.md)
+- Full Docs: [`README-REACT.md`](README-REACT.md)
+- Development Guide: [`DEVELOPMENT-GUIDE.md`](DEVELOPMENT-GUIDE.md)
+- Migration Details: [`REACT-MIGRATION.md`](REACT-MIGRATION.md)
 
 ## 📋 Table of Contents
 
@@ -244,8 +295,10 @@ This landing page is proprietary software. See LICENSE file for details.
 ## 🎯 Roadmap
 
 Future enhancements:
+- [x] **React.js version** ✨ (NEW!)
 - [ ] Dark mode toggle
 - [ ] Multi-language support (i18n)
+- [ ] TypeScript conversion
 - [ ] Blog integration
 - [ ] Newsletter signup
 - [ ] Live chat widget
@@ -254,6 +307,18 @@ Future enhancements:
 - [ ] Customer testimonials carousel
 
 ## 📝 Changelog
+
+### Version 2.0.0 (2024) - React Release 🎉
+- ✨ NEW: Complete React.js version with Vite
+- ✨ NEW: 10+ React components
+- ✨ NEW: 3 custom hooks
+- ✨ NEW: Enhanced developer experience
+- ✨ NEW: Comprehensive documentation (4 new guides)
+- ✅ All features from HTML version preserved
+- ✅ Component-based architecture
+- ✅ Modern React patterns (hooks)
+- ✅ SEO maintained with react-helmet-async
+- ✅ Performance optimized (59KB JS gzipped)
 
 ### Version 1.0.0 (2024)
 - Initial release
