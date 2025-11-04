@@ -74,11 +74,7 @@ const Header = () => {
         <div className="header__content">
           <div className="header__logo">
             <a href="#hero" aria-label="SOFIR Home">
-              <svg width="120" height="36" viewBox="0 0 120 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="36" height="36" rx="8" fill="#3B82F6"/>
-                <path d="M12 18L18 12L24 18L18 24L12 18Z" fill="white"/>
-                <text x="42" y="25" fontFamily="Inter, sans-serif" fontSize="20" fontWeight="800" fill="#0F172A">SOFIR</text>
-              </svg>
+              <img src="/logo.svg" alt="SOFIR" style={{ height: '36px' }} />
             </a>
           </div>
           

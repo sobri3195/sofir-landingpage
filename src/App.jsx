@@ -3,13 +3,17 @@ import SEOHead from './components/SEOHead';
 import Header from './components/Header';
 import MobileBottomNav from './components/MobileBottomNav';
 import FloatingCTA from './components/FloatingCTA';
+import WhatsAppButton from './components/WhatsAppButton';
 import Hero from './components/Hero';
 import Highlights from './components/Highlights';
 import BlocksShowcase from './components/BlocksShowcase';
+import Templates from './components/Templates';
 import Payments from './components/Payments';
+import Directory from './components/Directory';
 import Membership from './components/Membership';
 import Authors from './components/Authors';
 import FAQ from './components/FAQ';
+import Footer from './components/Footer';
 import './assets/styles.css';
 
 function App() {
@@ -22,37 +26,15 @@ function App() {
       <Header />
       <MobileBottomNav />
       <FloatingCTA />
+      <WhatsAppButton />
       
       <main id="main-content">
         <Hero />
         <Highlights />
         <BlocksShowcase />
-        
-        {/* Templates Section - Placeholder */}
-        <section className="templates" id="templates">
-          <div className="container">
-            <div className="section-header">
-              <h2 className="section-title">Template Library & FSE</h2>
-              <p className="section-subtitle">One-click import untuk memulai dengan cepat</p>
-            </div>
-            <div className="templates__placeholder">
-              <p>Template library coming soon...</p>
-            </div>
-          </div>
-        </section>
-        
+        <Templates />
         <Payments />
-        
-        {/* Directory Section - Placeholder */}
-        <section className="directory" id="directory">
-          <div className="container">
-            <div className="section-header">
-              <h2 className="section-title">Directory & Listing</h2>
-              <p className="section-subtitle">Sistem directory dengan maps dan filter</p>
-            </div>
-          </div>
-        </section>
-        
+        <Directory />
         <Membership />
         
         <Authors />
@@ -72,39 +54,9 @@ function App() {
             </div>
           </div>
         </section>
-        
-        {/* Footer */}
-        <footer className="footer" id="docs">
-          <div className="container">
-            <div className="footer__content">
-              <div className="footer__section">
-                <h4>SOFIR</h4>
-                <p>Smart Optimized Framework for Integrated Rendering</p>
-              </div>
-              <div className="footer__section">
-                <h4>Links</h4>
-                <ul>
-                  <li><a href="#features">Features</a></li>
-                  <li><a href="#blocks">Blocks</a></li>
-                  <li><a href="#pricing">Pricing</a></li>
-                  <li><a href="#docs">Documentation</a></li>
-                </ul>
-              </div>
-              <div className="footer__section">
-                <h4>Support</h4>
-                <ul>
-                  <li><a href="#faq">FAQ</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Community</a></li>
-                </ul>
-              </div>
-            </div>
-            <div className="footer__bottom">
-              <p>&copy; {new Date().getFullYear()} SOFIR. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
       </main>
+      
+      <Footer />
     </HelmetProvider>
   );
 }
