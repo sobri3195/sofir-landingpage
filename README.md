@@ -1,45 +1,28 @@
-# SOFIR Landing Page
+# SOFIR Landing Page - React Version
 
-Modern, responsive, and performant landing page for **SOFIR** - Smart Optimized Framework for Integrated Rendering.
+Modern, responsive, and performant landing page built with **React.js** for **SOFIR** - Smart Optimized Framework for Integrated Rendering.
 
-> 🎉 **NOW AVAILABLE IN TWO VERSIONS**: Pure HTML/CSS/JS and React.js!
+> 🚀 **Optimized for Netlify Deployment**
 
-## 🚀 Features
+## 🎉 Features
 
-- **Modern Design**: Clean, professional design with smooth animations
-- **Mobile-First**: Fully responsive from 320px to 4K screens
-- **Performance Optimized**: Native ES5 JavaScript, no build process required (HTML) or Vite-optimized (React)
-- **Accessibility**: WCAG AA compliant with proper ARIA labels
-- **SEO Ready**: Schema.org markup, Open Graph, and Twitter Cards
-- **Fast Loading**: Lazy loading images, optimized assets, minimal dependencies
-- **Two Versions**: Choose between Vanilla Stack (HTML/CSS/JS) or Modern React.js
+- ⚛️ **React 18.3** with modern hooks
+- ⚡ **Vite 5.4** for blazing fast builds
+- 📱 **Mobile-First Design** - Fully responsive
+- 🎨 **Modern UI/UX** - Clean and professional
+- ♿ **Accessible** - WCAG AA compliant
+- 🔍 **SEO Optimized** - react-helmet-async integration
+- 🚀 **Performance** - Code splitting & lazy loading
+- 📦 **Lightweight** - ~66KB total (gzipped)
 
-## 📦 Choose Your Version
+## 🚀 Quick Start
 
-### 🌟 HTML Version (Original)
-Perfect for simple deployment without build tools.
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
 
-**Quick Start:**
-```bash
-# Just open in browser
-open index.html
+### Installation
 
-# Or use local server
-python -m http.server 8000
-```
-
-**Pros:**
-- No build process
-- Smallest bundle size
-- Works anywhere
-- Simple deployment
-
-**Documentation:** You're reading it! (this README)
-
-### ⚛️ React Version (NEW!)
-Modern React.js application with Vite and hooks.
-
-**Quick Start:**
 ```bash
 # Install dependencies
 npm install
@@ -49,82 +32,108 @@ npm run dev
 
 # Build for production
 npm run build
+
+# Preview production build
+npm run preview
 ```
 
-**Pros:**
-- Component reusability
-- Better developer experience
-- Modern React ecosystem
-- Hot Module Replacement
+Then open `http://localhost:5173` in your browser.
 
-**Documentation:** 
-- Quick Start: [`QUICK-START-REACT.md`](QUICK-START-REACT.md)
-- Full Docs: [`README-REACT.md`](README-REACT.md)
-- Development Guide: [`DEVELOPMENT-GUIDE.md`](DEVELOPMENT-GUIDE.md)
-- Migration Details: [`REACT-MIGRATION.md`](REACT-MIGRATION.md)
+## 📦 Deployment to Netlify
 
-## 📋 Table of Contents
+### Option 1: Connect Git Repository (Recommended)
 
-- [Quick Start](#quick-start)
-- [Project Structure](#project-structure)
-- [Browser Support](#browser-support)
-- [Customization](#customization)
-- [Deployment](#deployment)
-- [Performance](#performance)
-- [License](#license)
+1. Push code to GitHub/GitLab/Bitbucket
+2. Login to [Netlify](https://app.netlify.com)
+3. Click "Add new site" → "Import an existing project"
+4. Connect your repository
+5. **Build settings** (auto-detected from `netlify.toml`):
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+6. Click "Deploy site"
 
-## 🏃 Quick Start
-
-1. **Clone or download** this repository
-2. **Open** `index.html` in your browser
-3. **Done!** No build process required
-
-For local development with live reload:
+### Option 2: Netlify CLI
 
 ```bash
-# Using Python 3
-python -m http.server 8000
+# Install Netlify CLI
+npm install -g netlify-cli
 
-# Using PHP
-php -S localhost:8000
+# Login to Netlify
+netlify login
 
-# Using Node.js http-server
-npx http-server -p 8000
+# Deploy to production
+netlify deploy --prod
 ```
 
-Then open `http://localhost:8000` in your browser.
+### Option 3: Drag & Drop
+
+```bash
+# Build the project
+npm run build
+
+# Drag & drop the 'dist' folder to Netlify
+```
+
+The `netlify.toml` file is already configured with optimal settings.
 
 ## 📁 Project Structure
 
 ```
 sofir-landing/
-├── index.html          # Main HTML file
-├── css/
-│   └── styles.css      # All styles (mobile-first)
-├── js/
-│   └── main.js         # Vanilla JavaScript (ES5)
-├── favicon.svg         # Site favicon
-├── .gitignore          # Git ignore rules
-└── README.md           # This file
+├── src/
+│   ├── components/          # React components
+│   │   ├── Header.jsx       # Sticky header
+│   │   ├── Hero.jsx         # Hero with counters
+│   │   ├── Highlights.jsx   # Feature cards
+│   │   ├── BlocksShowcase.jsx  # 28 blocks
+│   │   ├── Payments.jsx     # Payment gateways
+│   │   ├── Membership.jsx   # Pricing tiers
+│   │   ├── FAQ.jsx          # FAQ accordion
+│   │   ├── MobileBottomNav.jsx  # Mobile nav
+│   │   ├── FloatingCTA.jsx  # CTA button
+│   │   └── SEOHead.jsx      # SEO meta tags
+│   ├── hooks/               # Custom React hooks
+│   │   ├── useScrollDirection.js
+│   │   ├── useIntersectionObserver.js
+│   │   └── useCounter.js
+│   ├── assets/              # CSS and assets
+│   │   └── styles.css       # Main styles
+│   ├── App.jsx              # Main App component
+│   └── main.jsx             # Entry point
+├── index.html               # HTML template
+├── index-legacy.html        # Legacy HTML version
+├── vite.config.js           # Vite configuration
+├── netlify.toml             # Netlify configuration
+├── package.json             # Dependencies
+└── README.md                # This file
 ```
 
-## 🌐 Browser Support
+## 🎨 Components Overview
 
-- Chrome (last 2 versions)
-- Firefox (last 2 versions)
-- Safari (last 2 versions)
-- Edge (last 2 versions)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+### Core Components
 
-Graceful degradation for older browsers:
-- IE11: Basic functionality (no animations)
-- Older mobile browsers: Fallback styles
+1. **Header** - Sticky header with mobile hamburger menu
+2. **Hero** - Hero section with animated counters (28, 5, 100)
+3. **Highlights** - 12 feature cards with hover effects
+4. **BlocksShowcase** - Showcase of 28 Gutenberg blocks
+5. **Payments** - Payment gateway logos display
+6. **Membership** - 3 pricing tiers (Free, Basic, Pro)
+7. **FAQ** - Accordion-style FAQ section
+8. **MobileBottomNav** - Bottom navigation for mobile
+9. **FloatingCTA** - Floating CTA button
+10. **SEOHead** - SEO meta tags management
+
+### Custom Hooks
+
+1. **useScrollDirection** - Detect scroll direction & scrolled state
+2. **useIntersectionObserver** - Trigger animations on viewport entry
+3. **useCounter** - Animated counter with easing function
 
 ## 🎨 Customization
 
 ### Colors
 
-Edit CSS variables in `css/styles.css`:
+Edit CSS variables in `src/assets/styles.css`:
 
 ```css
 :root {
@@ -136,149 +145,127 @@ Edit CSS variables in `css/styles.css`:
 }
 ```
 
-### Typography
-
-Change fonts by editing the Google Fonts import in `index.html`:
-
-```html
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-```
-
-And update the font family variable:
-
-```css
-:root {
-    --font-family: 'Inter', sans-serif;
-}
-```
-
 ### Content
 
-All content is in `index.html`. Edit the text directly in the HTML structure.
+Edit content directly in component files in `src/components/`.
 
-### Images
+### Adding New Components
 
-Replace placeholder SVG images with real images:
-- Update `data-src` attributes for lazy-loaded images
-- Optimize images for web (WebP format recommended)
-- Use responsive images with `srcset` for best performance
+1. Create component in `src/components/YourComponent.jsx`
+2. Import in `src/App.jsx`
+3. Add to the component tree
 
-## 🚀 Deployment
+Example:
+```jsx
+// src/components/YourComponent.jsx
+export default function YourComponent() {
+  return (
+    <section className="your-component">
+      {/* Your content */}
+    </section>
+  );
+}
 
-### Static Hosting (Recommended)
+// src/App.jsx
+import YourComponent from './components/YourComponent';
 
-Deploy to any static hosting service:
-
-- **Netlify**: Drag & drop the folder
-- **Vercel**: Connect Git repository or use CLI
-- **GitHub Pages**: Push to `gh-pages` branch
-- **Cloudflare Pages**: Connect repository
-- **AWS S3 + CloudFront**: Upload to S3 bucket
-- **Firebase Hosting**: Use Firebase CLI
-
-### Traditional Hosting
-
-Upload files via FTP/SFTP to your web server:
-- Upload all files maintaining the folder structure
-- Ensure `index.html` is in the root or desired directory
-- Set up HTTPS (recommended for production)
-
-### WordPress Integration
-
-To integrate into WordPress:
-
-1. Create a custom page template
-2. Copy HTML sections into template
-3. Enqueue CSS and JS files properly
-4. Convert to WordPress functions for dynamic content
+// Add to JSX
+<YourComponent />
+```
 
 ## ⚡ Performance
 
-### Optimization Checklist
+### Build Output (Production)
 
-- ✅ Minified CSS (production)
-- ✅ Minified JavaScript (production)
-- ✅ Lazy loading images
-- ✅ Optimized SVGs
-- ✅ Resource hints (preconnect, prefetch)
-- ✅ Async/defer script loading
-- ✅ Critical CSS inline (optional)
-- ✅ GZIP/Brotli compression
-- ✅ CDN for static assets
+- **CSS**: ~5.73 KB (gzipped)
+- **JavaScript**: ~59.46 KB (gzipped)
+- **Total**: ~66 KB (gzipped)
 
-### Performance Metrics
+### Optimization Features
 
-Target metrics:
+- ✅ Code splitting
+- ✅ Tree shaking
+- ✅ Lazy loading
+- ✅ Asset optimization
+- ✅ CSS minification
+- ✅ JS minification
+- ✅ Gzip compression (via Netlify)
+- ✅ Cache headers configured
+
+### Performance Metrics Targets
+
 - **LCP** (Largest Contentful Paint): < 2.5s
 - **FID** (First Input Delay): < 100ms
 - **CLS** (Cumulative Layout Shift): < 0.1
 - **Time to Interactive**: < 3.5s
-- **Page Weight**: < 500KB (initial load)
 
-### Testing
-
-Test your site performance:
+Test with:
 - [Google PageSpeed Insights](https://pagespeed.web.dev/)
 - [WebPageTest](https://www.webpagetest.org/)
-- [GTmetrix](https://gtmetrix.com/)
 
-## 📱 Mobile Optimization
+## 🌐 Browser Support
 
-- Touch-friendly buttons (min 44×44px)
-- Optimized font sizes for readability
-- Bottom navigation for easy thumb access
-- Reduced animations for better performance
-- Optimized images for mobile networks
+- Chrome (last 2 versions)
+- Firefox (last 2 versions)
+- Safari (last 2 versions)
+- Edge (last 2 versions)
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## ♿ Accessibility
 
-- Semantic HTML structure
+- Semantic HTML5 structure
 - ARIA labels for interactive elements
 - Keyboard navigation support
 - Focus indicators visible
 - Color contrast WCAG AA compliant
-- Skip to content link
 - Screen reader friendly
 
-## 🔧 Development
+## 🔍 SEO
 
-### CSS Architecture
-
-- Mobile-first approach
-- CSS custom properties (variables)
-- BEM-like naming convention
-- Modular component structure
-- Progressive enhancement
-
-### JavaScript
-
-- Vanilla ES5 (no transpilation needed)
-- Feature detection
-- Progressive enhancement
-- Event delegation
-- Debounced scroll handlers
-- Intersection Observer for animations
-
-## 📊 SEO
-
-Built-in SEO features:
-- Semantic HTML5 elements
-- Schema.org structured data (JSON-LD)
+Built-in SEO features via `react-helmet-async`:
+- Dynamic meta tags
 - Open Graph tags
 - Twitter Card tags
-- Optimized meta descriptions
-- Heading hierarchy
-- XML sitemap ready
-- Robots.txt ready
+- Schema.org structured data
+- Semantic HTML elements
+- Optimized heading hierarchy
+
+## 📝 Environment Variables
+
+If you need environment variables:
+
+```bash
+# .env
+VITE_API_URL=https://api.example.com
+```
+
+Access in code:
+```jsx
+const apiUrl = import.meta.env.VITE_API_URL;
+```
+
+## 🔧 Configuration Files
+
+### netlify.toml
+
+Netlify configuration with build settings, redirects, and headers.
+
+### vite.config.js
+
+Vite configuration for build optimization.
+
+### package.json
+
+Dependencies and scripts configuration.
 
 ## 🤝 Contributing
 
 Contributions welcome! Please:
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## 📄 License
 
@@ -292,44 +279,40 @@ This landing page is proprietary software. See LICENSE file for details.
 - **Email**: support@sofir.id
 - **Community**: https://community.sofir.id
 
+## 📚 Additional Documentation
+
+- **Quick Start Guide**: [`QUICK-START-REACT.md`](QUICK-START-REACT.md)
+- **Development Guide**: [`DEVELOPMENT-GUIDE.md`](DEVELOPMENT-GUIDE.md)
+- **React Migration Details**: [`REACT-MIGRATION.md`](REACT-MIGRATION.md)
+- **Deployment Guide**: [`DEPLOYMENT.md`](DEPLOYMENT.md)
+
 ## 🎯 Roadmap
 
-Future enhancements:
-- [x] **React.js version** ✨ (NEW!)
+- [ ] TypeScript migration
+- [ ] Unit tests (Vitest)
+- [ ] E2E tests (Playwright)
+- [ ] Storybook integration
 - [ ] Dark mode toggle
 - [ ] Multi-language support (i18n)
-- [ ] TypeScript conversion
-- [ ] Blog integration
-- [ ] Newsletter signup
-- [ ] Live chat widget
-- [ ] Video backgrounds
-- [ ] Interactive demos
-- [ ] Customer testimonials carousel
+- [ ] PWA features
+- [ ] Server-side rendering (Next.js)
 
 ## 📝 Changelog
 
 ### Version 2.0.0 (2024) - React Release 🎉
-- ✨ NEW: Complete React.js version with Vite
-- ✨ NEW: 10+ React components
-- ✨ NEW: 3 custom hooks
-- ✨ NEW: Enhanced developer experience
-- ✨ NEW: Comprehensive documentation (4 new guides)
-- ✅ All features from HTML version preserved
-- ✅ Component-based architecture
-- ✅ Modern React patterns (hooks)
-- ✅ SEO maintained with react-helmet-async
-- ✅ Performance optimized (59KB JS gzipped)
 
-### Version 1.0.0 (2024)
-- Initial release
-- Complete landing page structure
-- 28 Gutenberg blocks showcase
-- Payment gateway integration info
-- Directory and listing features
-- Membership and loyalty sections
-- Full responsive design
-- Performance optimized
+- ✨ Complete React.js rewrite
+- ✨ 10+ React components
+- ✨ 3 custom hooks
+- ✨ Vite build system
+- ✨ Netlify optimized
+- ✨ SEO with react-helmet-async
+- ✨ Performance optimized (~66KB gzipped)
+- ✨ Mobile-first responsive design
+- ✨ All HTML version features preserved
 
 ---
 
 **Made with ❤️ by the SOFIR Team**
+
+**Built with React ⚛️ | Powered by Vite ⚡ | Deployed on Netlify 🚀**

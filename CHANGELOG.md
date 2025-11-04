@@ -5,6 +5,74 @@ All notable changes to the SOFIR Landing Page project will be documented in this
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.0] - 2024-11-04 - Netlify Ready! 🚀
+
+### Changed
+- **BREAKING**: React is now the default version (index.html)
+- Legacy HTML version renamed to index-legacy.html
+- Updated README.md to focus on React + Netlify deployment
+- Streamlined package.json scripts
+
+### Added
+- ✨ `netlify.toml` - Complete Netlify configuration
+- ✨ `.nvmrc` - Node version specification (18)
+- ✨ `public/_redirects` - SPA routing support
+- ✨ `NETLIFY-DEPLOYMENT.md` - Complete deployment guide
+- ✨ `README-LEGACY.md` - Legacy version documentation
+- ✨ Security headers in netlify.toml
+- ✨ Cache control for assets (1 year)
+- ✨ Automatic HTTPS redirects
+
+### Optimized
+- Build output: ~66KB gzipped (CSS: 5.73KB + JS: 59.46KB)
+- Vite configuration for optimal Netlify deployment
+- Asset optimization and code splitting
+- CDN-ready with proper cache headers
+
+### Infrastructure
+- Ready for one-click Netlify deployment
+- Auto-deploy on git push
+- Deploy previews for pull requests
+- Environment variable support
+- Build command: `npm run build`
+- Publish directory: `dist`
+
+## [2.0.0] - 2024-11-01 - React Migration 🎉
+
+### Added
+- ✨ Complete React.js version (React 18.3)
+- ✨ Vite 5.4 build system
+- ✨ 10+ React components
+- ✨ 3 custom hooks (useScrollDirection, useIntersectionObserver, useCounter)
+- ✨ react-helmet-async for SEO
+- ✨ Hot Module Replacement (HMR)
+- ✨ Component-based architecture
+- ✨ Comprehensive React documentation
+
+### Components
+- Header.jsx - Sticky header with mobile menu
+- Hero.jsx - Hero with animated counters
+- Highlights.jsx - 12 feature cards
+- BlocksShowcase.jsx - 28 Gutenberg blocks
+- Payments.jsx - Payment gateway display
+- Membership.jsx - Pricing tiers
+- FAQ.jsx - FAQ accordion
+- MobileBottomNav.jsx - Mobile bottom navigation
+- FloatingCTA.jsx - Floating CTA button
+- SEOHead.jsx - SEO meta tags
+
+### Documentation
+- README-REACT.md - React version documentation
+- QUICK-START-REACT.md - 5-minute quick start
+- DEVELOPMENT-GUIDE.md - Component development guide
+- REACT-MIGRATION.md - Technical migration details
+
+### Performance
+- Code splitting and tree shaking
+- Lazy loading components
+- Optimized bundle size (~66KB gzipped)
+- Production build optimization
+
 ## [1.0.0] - 2024-01-01
 
 ### Added
