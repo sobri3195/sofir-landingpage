@@ -1,0 +1,22 @@
+{
+  "name": "SOFIR - Smart Optimized Framework for Integrated Rendering",
+  "short_name": "SOFIR",
+  "description": "All-in-one WordPress plugin dengan arsitektur PHP 8.0+, native Gutenberg & Full Site Editing",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#3B82F6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "business", "development"],
+  "lang": "id-ID",
+  "dir": "ltr",
+  "scope": "/"
+}
