@@ -1,0 +1,39 @@
+feat: Add authors section, enhance animations, and clean header navigation
+
+✨ New Features:
+- Add Authors section with Firman Elhakim and Dr. Muhammad Sobri Maulana
+- Implement 10+ animation types (scroll-triggered, hover, continuous)
+- Add active section tracking in header navigation
+
+🎨 Improvements:
+- Simplify header navigation from 10 to 6 items
+- Add staggered animations for all card components
+- Enhance FAQ with scroll-triggered animations
+- Add image zoom and card lift effects on hover
+- Improve visual hierarchy and spacing
+
+🐛 Fixes:
+- Fix header navigation routes to point to existing sections
+- Update Membership component ID to #pricing
+- Improve smooth scroll with proper header offset
+- Fix FAQ accordion animation glitches
+
+📊 Performance:
+- Total gzipped: ~67 KB (still optimal!)
+- CSS: 6.41 KB gzipped
+- JS: 60.89 KB gzipped
+- All animations GPU-accelerated
+
+📱 Responsive:
+- Authors cards stack on mobile
+- All animations work smoothly on touch devices
+- Reduced motion support for accessibility
+
+Files changed:
+- Added: src/components/Authors.jsx
+- Modified: src/components/Header.jsx
+- Modified: src/components/FAQ.jsx
+- Modified: src/App.jsx
+- Modified: src/assets/styles.css
+- Added: CHANGELOG-v3.1.md
+- Added: UPDATE-SUMMARY.md

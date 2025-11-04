@@ -1,8 +1,15 @@
 import { useState } from 'react';
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
-const FAQItem = ({ question, answer, isOpen, onToggle }) => {
+const FAQItem = ({ question, answer, isOpen, onToggle, delay }) => {
+  const [itemRef, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+  
   return (
-    <div className={`faq-item ${isOpen ? 'open' : ''}`}>
+    <div 
+      ref={itemRef}
+      className={`faq-item ${isOpen ? 'open' : ''} ${isVisible ? 'visible' : ''}`}
+      style={{ '--delay': `${delay}s` }}
+    >
       <button className="faq-item__question" onClick={onToggle}>
         <span>{question}</span>
         <svg 
@@ -72,6 +79,7 @@ const FAQ = () => {
               answer={faq.answer}
               isOpen={openIndex === index}
               onToggle={() => setOpenIndex(openIndex === index ? null : index)}
+              delay={index * 0.1}
             />
           ))}
         </div>

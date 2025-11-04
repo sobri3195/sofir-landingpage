@@ -8,6 +8,7 @@ import Highlights from './components/Highlights';
 import BlocksShowcase from './components/BlocksShowcase';
 import Payments from './components/Payments';
 import Membership from './components/Membership';
+import Authors from './components/Authors';
 import FAQ from './components/FAQ';
 import './assets/styles.css';
 
@@ -54,79 +55,7 @@ function App() {
         
         <Membership />
         
-        {/* Webhooks Section */}
-        <section className="webhooks" id="webhooks">
-          <div className="container">
-            <div className="section-header">
-              <h2 className="section-title">Webhooks & Integration</h2>
-              <p className="section-subtitle">Bit Integration untuk otomasi workflow</p>
-            </div>
-          </div>
-        </section>
-        
-        {/* Loyalty Section */}
-        <section className="loyalty" id="loyalty">
-          <div className="container">
-            <div className="section-header">
-              <h2 className="section-title">Loyalty Program</h2>
-              <p className="section-subtitle">Reward system untuk engagement</p>
-            </div>
-          </div>
-        </section>
-        
-        {/* SEO Section */}
-        <section className="seo" id="seo">
-          <div className="container">
-            <div className="section-header">
-              <h2 className="section-title">SEO Optimized</h2>
-              <p className="section-subtitle">Built-in SEO best practices</p>
-            </div>
-          </div>
-        </section>
-        
-        {/* Performance Section */}
-        <section className="performance" id="performance">
-          <div className="container">
-            <div className="section-header">
-              <h2 className="section-title">Performance First</h2>
-              <p className="section-subtitle">Dioptimasi untuk kecepatan maksimal</p>
-            </div>
-          </div>
-        </section>
-        
-        {/* Security Section */}
-        <section className="security" id="security">
-          <div className="container">
-            <div className="section-header">
-              <h2 className="section-title">Security First</h2>
-              <p className="section-subtitle">Keamanan yang solid</p>
-            </div>
-          </div>
-        </section>
-        
-        {/* System Requirements */}
-        <section className="requirements" id="requirements">
-          <div className="container">
-            <div className="section-header">
-              <h2 className="section-title">System Requirements</h2>
-              <p className="section-subtitle">Minimal requirement untuk menjalankan SOFIR</p>
-            </div>
-            <div className="requirements__grid">
-              <div className="requirement-card">
-                <h4>WordPress</h4>
-                <p>6.3+</p>
-              </div>
-              <div className="requirement-card">
-                <h4>PHP</h4>
-                <p>8.0+</p>
-              </div>
-              <div className="requirement-card">
-                <h4>MySQL</h4>
-                <p>5.7+</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Authors />
         
         <FAQ />
         
