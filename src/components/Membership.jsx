@@ -112,7 +112,7 @@ const Membership = () => {
   ];
 
   return (
-    <section className="membership" id="membership">
+    <section className="membership" id="pricing">
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Pilihan Membership</h2>
